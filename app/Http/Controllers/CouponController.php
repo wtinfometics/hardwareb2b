@@ -138,9 +138,9 @@ class CouponController extends Controller
              $deleteCoupon = $this->couponServices->deleteCoupon($coupon_id);
 
             if (!empty($deleteCoupon['success']) && $deleteCoupon['success'] === true) {
-                return redirect()->back()->with('success', $deleteCoupon['message'] ?? 'Category deleted successfully!');
+                return redirect()->back()->with('success', $deleteCoupon['message'] ?? 'Coupon deleted successfully!');
             }
-            return redirect()->back()->with('error', $deleteCoupon['message'] ?? 'Failed to delete Category.');
+            return redirect()->back()->with('error', $deleteCoupon['message'] ?? 'Failed to delete Coupon.');
         } catch (\Throwable $th) {
             //throw $th;
             return redirect()->back()->with('error', $th->getMessage())->withInput();

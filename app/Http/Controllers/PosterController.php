@@ -151,9 +151,9 @@ class PosterController extends Controller
             $deletePoster = $this->posterService->deletePoster($poster_id);
 
             if (!empty($deletePoster['success']) && $deletePoster['success'] === true) {
-                return redirect()->back()->with('success', $deletePoster['message'] ?? 'Category deleted successfully!');
+                return redirect()->back()->with('success', $deletePoster['message'] ?? 'Poster deleted successfully!');
             }
-            return redirect()->back()->with('error', $deletePoster['message'] ?? 'Failed to delete Category.');
+            return redirect()->back()->with('error', $deletePoster['message'] ?? 'Failed to delete Poster.');
         } catch (\Throwable $th) {
             //throw $th;
             return redirect()->back()->with('error', $th->getMessage())->withInput();

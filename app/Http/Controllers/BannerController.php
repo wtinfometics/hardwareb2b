@@ -151,9 +151,9 @@ class BannerController extends Controller
             $deleteBanner = $this->bannerService->deleteBanner($banner_id);
 
             if (!empty($deleteBanner['success']) && $deleteBanner['success'] === true) {
-                return redirect()->back()->with('success', $deleteBanner['message'] ?? 'Category deleted successfully!');
+                return redirect()->back()->with('success', $deleteBanner['message'] ?? 'Banner deleted successfully!');
             }
-            return redirect()->back()->with('error', $deleteBanner['message'] ?? 'Failed to delete Category.');
+            return redirect()->back()->with('error', $deleteBanner['message'] ?? 'Failed to delete Banner.');
         } catch (\Throwable $th) {
             //throw $th;
             return redirect()->back()->with('error', $th->getMessage())->withInput();

@@ -131,9 +131,9 @@ class BrandController extends Controller
             $deleteBrand = $this->brandServices->deleteBrand($brand_id);
 
             if (!empty($deleteBrand['success']) && $deleteBrand['success'] === true) {
-                return redirect()->back()->with('success', $deleteBrand['message'] ?? 'Category deleted successfully!');
+                return redirect()->back()->with('success', $deleteBrand['message'] ?? 'Band deleted successfully!');
             }
-            return redirect()->back()->with('error', $deleteBrand['message'] ?? 'Failed to delete Category.');
+            return redirect()->back()->with('error', $deleteBrand['message'] ?? 'Failed to delete Band.');
         } catch (\Throwable $th) {
             //throw $th;
             return redirect()->back()->with('error', $th->getMessage())->withInput();

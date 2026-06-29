@@ -216,9 +216,9 @@ class ProductController extends Controller
             $deleteProduct = $this->productServices->deleteProduct($product_id);
 
             if (!empty($deleteProduct['success']) && $deleteProduct['success'] === true) {
-                return redirect()->back()->with('success', $deleteProduct['message'] ?? 'Category deleted successfully!');
+                return redirect()->back()->with('success', $deleteProduct['message'] ?? 'Product deleted successfully!');
             }
-            return redirect()->back()->with('error', $deleteProduct['message'] ?? 'Failed to delete Category.');
+            return redirect()->back()->with('error', $deleteProduct['message'] ?? 'Failed to delete Product.');
         } catch (\Throwable $th) {
             //throw $th;
             return redirect()->back()->with('error', $th->getMessage())->withInput();

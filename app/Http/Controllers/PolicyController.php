@@ -127,9 +127,9 @@ class PolicyController extends Controller
             $deletePolicy = $this->policyServices->deletePolicy($policy_id);
 
             if (!empty($deletePolicy['success']) && $deletePolicy['success'] === true) {
-                return redirect()->back()->with('success', $deletePolicy['message'] ?? 'Category deleted successfully!');
+                return redirect()->back()->with('success', $deletePolicy['message'] ?? 'Policy deleted successfully!');
             }
-            return redirect()->back()->with('error', $deletePolicy['message'] ?? 'Failed to delete Category.');
+            return redirect()->back()->with('error', $deletePolicy['message'] ?? 'Failed to delete Policy.');
         } catch (\Throwable $th) {
             //throw $th;
             return redirect()->back()->with('error', $th->getMessage())->withInput();

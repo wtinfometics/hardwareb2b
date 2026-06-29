@@ -150,9 +150,9 @@ class SubcategoryController extends Controller
             $response = $this->subcategoryServices->deleteSubCategory($subcategory_id);
 
             if (!empty($response['success']) && $response['success'] === true) {
-                return redirect()->back()->with('success', $response['message'] ?? 'Category deleted successfully!');
+                return redirect()->back()->with('success', $response['message'] ?? 'Sub Category deleted successfully!');
             }
-            return redirect()->back()->with('error', $response['message'] ?? 'Failed to delete Category.');
+            return redirect()->back()->with('error', $response['message'] ?? 'Failed to delete Sub Category.');
         } catch (\Throwable $th) {
             //throw $th;
             return redirect()->back()->with('error', $th->getMessage())->withInput();

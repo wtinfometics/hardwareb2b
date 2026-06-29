@@ -188,9 +188,9 @@ class PostController extends Controller
             $deletePost = $this->postService->deletePost($post_id);
 
             if (!empty($deletePost['success']) && $deletePost['success'] === true) {
-                return redirect()->back()->with('success', $deletePost['message'] ?? 'Category deleted successfully!');
+                return redirect()->back()->with('success', $deletePost['message'] ?? 'Post deleted successfully!');
             }
-            return redirect()->back()->with('error', $deletePost['message'] ?? 'Failed to delete Category.');
+            return redirect()->back()->with('error', $deletePost['message'] ?? 'Failed to delete Post.');
         } catch (\Throwable $th) {
             //throw $th;
             return redirect()->back()->with('error', $th->getMessage())->withInput();

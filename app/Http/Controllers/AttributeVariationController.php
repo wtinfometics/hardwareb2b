@@ -61,7 +61,7 @@ class AttributeVariationController extends Controller
             $message = $attributes['message'] ?? '';
             $data    = $attributes['data'] ?? [];
             $paginatedData = PaginationHelper::paginate($data, 10);
-            return view('/admin/attribute-variations', compact('success', 'message', 'paginatedData','attribute_id'));
+            return view('Admin.attribute-variations', compact('success', 'message', 'paginatedData','attribute_id'));
         } catch (\Throwable $th) {
             //throw $th;
             return redirect()->back()->with('error',$th->getTraceAsString());
