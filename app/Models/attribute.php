@@ -18,6 +18,6 @@ class attribute extends Model
       // Relationship
     public function attributevariations()
     {
-        return $this->hasMany(AttributeVariation::class, 'attribute_id', 'attribute_id');
+        return $this->hasMany(attributevariation::class, 'attribute_id', 'attribute_id');
     }
 }

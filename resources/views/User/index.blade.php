@@ -60,7 +60,7 @@
             <div class="col-12 col-lg-5 col-xl-3 wow fadeInRight" data-wow-delay="0.1s">
                 <div class="carousel-header-banner h-100">
                     <img src="{{ asset('user/img/cover.png') }}" class="img-fluid w-100 h-100"
-                        style="object-fit: cover;" alt="Image">
+                        style="object-fit: cover;" alt="Image"> 
                 
                 </div>
             </div>

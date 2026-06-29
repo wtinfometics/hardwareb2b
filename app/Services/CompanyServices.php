@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use App\Models\company;
+use Illuminate\Support\Facades\File;
 
 class CompanyServices {
 

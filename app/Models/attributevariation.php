@@ -20,6 +20,6 @@ class attributevariation extends Model
 
      public function attributes()
     {
-        return $this->belongsTo(Attribute::class, 'attribute_id', 'attribute_id');
+        return $this->belongsTo(attribute::class, 'attribute_id', 'attribute_id');
     }
 }

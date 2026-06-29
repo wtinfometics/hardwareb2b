@@ -173,8 +173,7 @@
                                                                             </tr>
                                                                         @empty
                                                                             <tr>
-                                                                                <td colspan="6" class="text-center">No
-                                                                                    Product Variation found</td>
+                                                                                <td colspan="6" class="text-center">No Product Variation found</td>
                                                                             </tr>
                                                                         @endforelse
                                                                     </tbody>
